@@ -1,5 +1,9 @@
 <%= @article.title %>
 <br>
+Tags:
+  <% @article.tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag) %>
+  <% end %>
 <p><%= @article.body %>
 <br><br>
 <%= link_to "edit", edit_article_path(@article) %><br>

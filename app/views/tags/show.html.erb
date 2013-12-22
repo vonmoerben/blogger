@@ -1,0 +1,5 @@
+Articles Tagged with <%= @tag.name %>
+
+<% @tag.articles.each do |article| %>    
+  <%= link_to article.title, article_path(article) %>
+<% end %>
