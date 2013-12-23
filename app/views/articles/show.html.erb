@@ -4,6 +4,7 @@ Tags:
   <% @article.tags.each do |tag| %>
     <%= link_to tag.name, tag_path(tag) %>
   <% end %>
+<p><%= image_tag @article.image.url(:medium) if @article.image.exists? %>
 <p><%= @article.body %>
 <br><br>
 <%= link_to "edit", edit_article_path(@article) %><br>
